@@ -1,0 +1,33 @@
+This assignment will require the refactoring of the classes developed in the previous assignment. 
+Plus the completion of the Quiz for group point. 
+
+
+Description Create a new project, LastNameFirst06, for this assignment. 
+You may want to start by copying the classes from the previous assignment to this new project. 
+
+You will need to incorporate the following changes: 
+
+Repackage Create a new package, edu.washington.ext.common. 
+This package will contain the Employee interface and a new AbstractEmployee class and a new CommissionedEmployee interface.
+
+AbstractEmployee This class implements the Employee interface and should be used in the implementation of 
+the other employee classes to the extent possible.
+
+CommissionedEmployee CommissionedEmployee This interface specifies a calculateCommission method, 
+and is implemented by both LibraryAssociate and Librarian. 
+
+Librarian  The librarian's "bonus" is really a commission.
+ 
+Library Add a getTotalCommissions methods that calculates the total commissions paid for the Library. 
+
+LibraryTest Add a test for the Library's getTotalCommisions methods. The expected value is 2752.50
+ 
+Restrict Access Restrict the extensibility of all of your classes to the greatest extend possible. 
+Experiment with different package structures, how does this effect the visibility modifiers? 
+
+Questions Answer the following questions and place in answer.txt file.The answer.txt file should be created in the project src directory. 
+
+How does inheritance break encapsulation? 
+What are static and dynamic types and how are they different?
+What to turn in exported project as a zip file. Submit this file per the assignment submission instructions. 
+Submit as zip file below as defined and see below for submital
