@@ -1,0 +1,9 @@
+Questions:
+How does inheritance break encapsulation? 
+	Inheriting from a class gives the subclass as much access as possible as specified by the access modifiers.  
+	This violates whatever encapsulation was intended for the class.
+What are static and dynamic types and how are they different?
+	a static type is a type that is defined upon declaration and doesn't need to be initialized
+	e.g. String myName;
+	a dynamic type is a type that doesn't need to be defined upon declaration but must be initialized
+	e.g. myName = "Luke";
