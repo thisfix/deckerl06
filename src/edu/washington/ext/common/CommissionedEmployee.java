@@ -1,6 +1,15 @@
 package edu.washington.ext.common;
 
+
+/**
+ * The Interface CommissionedEmployee.
+ */
 public interface CommissionedEmployee {
 
- 	double calculateCommission();
+ 	/**
+	  * Calculate commission.
+	  *
+	  * @return the double
+	  */
+	 double calculateCommission();
 }
