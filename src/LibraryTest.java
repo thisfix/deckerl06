@@ -188,7 +188,7 @@ public class LibraryTest {
 		List<PayrollRecord> payrollList = library.processPayroll();
 		for (Iterator<PayrollRecord> i = payrollList.iterator(); i.hasNext(); ){
 			PayrollRecord record = i.next();
-			System.out.println(record.getEmployeeName()+" pay = "+record.getCurrentPay());
+			//System.out.println(record.getEmployeeName()+" pay = "+record.getCurrentPay());
 			String name = record.getEmployeeName();
 			if (name == LIBRARIAN_NAME){
 				assertEquals(LIBRARIAN_PAY, record.getCurrentPay(),0);
@@ -209,7 +209,7 @@ public class LibraryTest {
 	 */
 	@Test
 	public void testGetCurrentUsedBookSales() {
-		System.out.println("Library current sales = "+library.getCurrentUsedBookSales());
+		//System.out.println("Library current sales = "+library.getCurrentUsedBookSales());
 		assertEquals(LIBRARY_CURRENT_SALES, library.getCurrentUsedBookSales(),0);
 	}
 
@@ -219,7 +219,7 @@ public class LibraryTest {
 	@Test
 	public void testGetTotalCommissions() {
 		double tempCommission = library.getTotalCommissions();
-		System.out.println("Library current total commissions = "+tempCommission);
+		//System.out.println("Library current total commissions = "+tempCommission);
 		assertEquals(LIBRARY_TOTAL_COMMISSIONS, tempCommission,0);
 	}
 

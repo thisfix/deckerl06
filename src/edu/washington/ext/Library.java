@@ -81,7 +81,6 @@ public class Library {
 		double commissionTotal = 0;
 		for (int i=0; i< staff.size(); i++){
 			commissionTotal += staff.get(i).calculateCommission();
-			System.out.println("commissionTotal = "+commissionTotal);
 		}
 		commissionTotal += librarian.calculateCommission();
 		return commissionTotal;
