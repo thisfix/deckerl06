@@ -1,6 +1,5 @@
 package edu.washington.ext;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class PayrollRecord.
  */

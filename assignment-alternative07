@@ -1,0 +1,31 @@
+Using Exceptions with the previous assignments on Library Used Book Sales
+
+This is optional replacement for Assignment 7 or alternative to it. It is based on using the solution for assignment 6. 
+
+Provide the following implements of error checking
+- When name is set for employee which includes all types, verify that its not null or "" and throw IllegalArgumentException if so
+
+- setCurrentSales, setHourlyRate, setCurrentHours methods of all types, check that its not zero or negative, 
+throw IllegalArgumentException
+
+- setCommissionRate, setCurrentLibrarianUsedBookTotals, setBasePay, setCurrentLibraryUsedBookSalesTotals, 
+check to make sure not zero or negative, throw IllegalArgumentException
+
+- Library, libraryNumber is negative or zero throw IllegalArgumentException
+
+- processPayroll throws LibraryException if a CommissionedEmployee's commissionRate is > 100% and includes the Employee object in 
+the LibraryException. Add getCommissionRate method on CommissionedEmployee interface.
+
+- processPayroll/getCurrentUsedBookSales throws new LibraryException if no employees are staffed in the store.
+
+- getTotalCommissions throws new LibraryCommissionException if total is zero or negative. contains the total in the exception
+
+Define a new Exception Class called LibraryException, that has one property of type CommissionedEmployee. Also, has a get method 
+for this property.
+
+Define a new Exception Class called LibraryCommissionException, it has one property of type double containing the commission totals.
+
+In the LibraryTest class validate all the above including positive tests. Example, set libraryNumber to 1 and test should pass. 
+no exception.
+
+Turn in same as in previous assignment bundle/zip project and submit.

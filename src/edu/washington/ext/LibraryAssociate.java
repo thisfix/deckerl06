@@ -30,19 +30,24 @@ public class LibraryAssociate extends LibraryEmployee implements CommissionedEmp
 	}
 	
 
-	/* (non-Javadoc)
-	 * @see edu.washington.ext.LibraryEmployee#calculatePay()
-	 */
+	/**
+	 * Calculates pay.
+	 * overrides the LibraryEmployee method to more appropriately reflect a LibraryAssociate
+	 *
+	 * @return the pay
+	 */	
 	public double calculatePay() {
 		
 		return (super.calculatePay()+calculateCommission());
 	}
 
-	/* (non-Javadoc)
-	 * @see edu.washington.ext.LibraryEmployee#calculateCommission()
-	 */
+	/**
+	 * Calculates commission.
+	 * overrides the LibraryEmployee method to more appropriately reflect a LibraryAssociate
+	 *
+	 * @return the commission
+	 */	
 	@Override
-	
 	public double calculateCommission() {
 		double tempCommission = (super.getCurrentSales()*this.commissionRate)+super.calculateCommission();
 		return tempCommission;

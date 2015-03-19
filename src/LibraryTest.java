@@ -11,8 +11,9 @@ import edu.washington.ext.Library;
 import edu.washington.ext.LibraryAssociate;
 import edu.washington.ext.LibraryEmployee;
 import edu.washington.ext.PayrollRecord;
+import edu.washington.ext.common.LibraryCommissionException;
+import edu.washington.ext.common.LibraryException;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class LibraryTest.
  */
@@ -179,13 +180,24 @@ public class LibraryTest {
 //	public void testGetLibraryNumber() {
 //		fail("Not yet implemented");
 //	}
-
 	/**
- * Test process payroll.
- */
-@Test
+	 * Exception1.
+	 */
+	@Test(expected = IllegalArgumentException.class)
+	public void exception1(){
+		Library lib = new Library(0);
+	}
+	/**
+	 * Test process payroll.
+	 */
+	@Test
 	public void testProcessPayroll() {
-		List<PayrollRecord> payrollList = library.processPayroll();
+		List<PayrollRecord> payrollList = null;
+		try {
+			payrollList = library.processPayroll();
+		} catch (LibraryException e) {
+			e.printStackTrace();
+		}
 		for (Iterator<PayrollRecord> i = payrollList.iterator(); i.hasNext(); ){
 			PayrollRecord record = i.next();
 			//System.out.println(record.getEmployeeName()+" pay = "+record.getCurrentPay());
@@ -209,8 +221,12 @@ public class LibraryTest {
 	 */
 	@Test
 	public void testGetCurrentUsedBookSales() {
-		//System.out.println("Library current sales = "+library.getCurrentUsedBookSales());
-		assertEquals(LIBRARY_CURRENT_SALES, library.getCurrentUsedBookSales(),0);
+		try {
+			System.out.println("Library current sales = "+library.getCurrentUsedBookSales());
+			assertEquals(LIBRARY_CURRENT_SALES, library.getCurrentUsedBookSales(),0);
+		} catch (LibraryException e) {
+			e.printStackTrace();
+		}
 	}
 
 	/**
@@ -218,7 +234,12 @@ public class LibraryTest {
 	 */
 	@Test
 	public void testGetTotalCommissions() {
-		double tempCommission = library.getTotalCommissions();
+		double tempCommission = 0;
+		try {
+			tempCommission = library.getTotalCommissions();
+		} catch (LibraryCommissionException e) {
+			e.printStackTrace();
+		}
 		//System.out.println("Library current total commissions = "+tempCommission);
 		assertEquals(LIBRARY_TOTAL_COMMISSIONS, tempCommission,0);
 	}
